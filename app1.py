@@ -6,7 +6,14 @@ from PIL import Image
 
 
 
+col1, col2, col3 = st.columns([1, 2, 1])
 
+with col2:
+    try:
+        st.image('intro_animation.gif', use_container_width=True)
+    except FileNotFoundError:
+        st.warning("⚠️ GIF de introducción no encontrado")
+          
 st.title("Reconocimiento óptico de Caracteres")
 
 img_file_buffer = st.camera_input("Toma una Foto")
