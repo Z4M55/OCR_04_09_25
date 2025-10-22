@@ -7,9 +7,6 @@ from PIL import Image
 
 
 
-try:
-    st.image('esct.gif', use_container_width=True)
-
 st.title("Reconocimiento óptico de Caracteres")
 
 img_file_buffer = st.camera_input("Toma una Foto")
